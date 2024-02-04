@@ -21,6 +21,7 @@ html {
     right: 0;
     height: 46px;
     background-color: #000;
+    z-index: 1;
 }
 
 #nav {
@@ -103,16 +104,15 @@ html {
 in this case, kích thước chiều cao luôn = 50% chiều rộng. */
     background: url('/assests/img/slider/slider1.jpg') top center / cover no-repeat; 
  /* -> background-image(url)/ background-position/ background-size */
-   
 }
 #slider .text-content {
     position: absolute;
     color: #fff;
     bottom: 47px;
     text-align: center;  
-    /* width: 100%; */
-    transform: translateX(-50%);
-    left: 50%;
+    width: 100%;
+    /* transform: translateX(-50%);
+    left: 50%; */
 }
 #content {}
 
