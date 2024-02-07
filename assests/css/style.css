@@ -14,9 +14,13 @@ html {
     height: 20000px;
 }
 
+.clear {
+    clear: both;
+}
+
 #header {
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
     right: 0;
     height: 46px;
@@ -83,12 +87,14 @@ html {
 #header .search-btn {
     float: right;
     padding: 0 21px;
-    
+
 }
+
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
 }
+
 #header .search-icon {
     color: white;
     font-size: 20px;
@@ -99,21 +105,151 @@ html {
 #slider {
     position: relative;
     margin-top: 46px;
-    padding-top: 50%; 
-/* khi đặt là giá trị %, thì nó luôn tỷ lệ với % chiều ngang của chính nó
+    padding-top: 50%;
+    /* khi đặt là giá trị %, thì nó luôn tỷ lệ với % chiều ngang của chính nó
 in this case, kích thước chiều cao luôn = 50% chiều rộng. */
-    background: url('/assests/img/slider/slider1.jpg') top center / cover no-repeat; 
- /* -> background-image(url)/ background-position/ background-size */
+    background: url('/assests/img/slider/slider1.jpg') top center / cover no-repeat;
+    /* -> background-image(url)/ background-position/ background-size */
 }
+
 #slider .text-content {
     position: absolute;
     color: #fff;
     bottom: 47px;
-    text-align: center;  
+    text-align: center;
     width: 100%;
     /* transform: translateX(-50%);
     left: 50%; */
 }
+
+.text-heading {
+    font-family: Segoe UI, Arial, sans-serif;
+    font-size: 150%;
+}
+
+.text-description {
+    margin: 15px;
+    font-weight: bolder;
+}
+
 #content {}
 
-#footer {}
+.content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.content-info {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.members-list {
+    margin-top: 48px;
+}
+
+.member-item {
+    float: left;
+    width: 33.33333%;
+    /* một cách khác, dùng calc */
+    /* width: calc(100% / 3); */
+    text-align: center;
+}
+
+.member-name {
+    font-size: 15px;
+}
+
+.member-img {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* Tour section */
+.text-white {
+    color: #fff !important;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    margin-top: 40px;
+    background-color: #fff;
+    list-style: none;
+}
+
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    color: #757575;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantities {
+    float: right;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #000;
+    margin-top: -3px;
+    color: #fff;
+    margin-right: 3px;
+}
+
+/* Places-section */
+.place-listing {
+    margin-top: 32px;
+    overflow: hidden;
+}
+
+.place-item {
+    float: left;
+    width: 33.33333%;
+    padding: 8px;
+}
+
+.place-body {}
+
+.place-heading {}
+
+.place-time {}
+
+.place-description {}
+
+.buy-btn {}
+
+
+/* End of Tour section */
+#content #footer {}
