@@ -11,7 +11,7 @@ html {
 }
 
 #main {
-    height: 20000px;
+
 }
 
 .clear {
@@ -231,13 +231,16 @@ in this case, kích thước chiều cao luôn = 50% chiều rộng. */
 /* Places-section */
 .place-listing {
     margin-top: 32px;
-    overflow: hidden;
 }
 
 .place-item {
     float: left;
     width: 33.33333%;
-    padding: 8px;
+    padding: 0 8px;
+}
+
+.place-img {
+    width: 100%;
 }
 
 .place-body {}
