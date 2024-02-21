@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Band</title>
+    <link rel="icon" href="https://www.w3schools.com/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assests/css/style.css">
     <link rel="stylesheet" href="./assests/fonts/themify-icons/themify-icons.css">
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -18,18 +19,18 @@
         <div id="header">
             <!-- BEGIN NAV -->
             <ul id="nav"> <!--ul#nav>li*5>a>tab-->
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a> </li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a> </li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a>More <i class="nav-angle-down ti-angle-down"></i>
                         <!-- <i class="fas fa-arrow-down"></i>  -->
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -49,7 +50,7 @@
         <!-- End of Slider New York -->
         <div id="content">
             <!-- Theband section -->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="content-info">We have created a fictional band website. Lorem ipsum dolor sit amet,
@@ -77,7 +78,7 @@
                         <img src="/assests/img/band_member/mem1.jpg" alt="" class="member-img">
                     </div>
 
-                    <div class="clear"></div>
+
 
                 </div>
 
@@ -85,17 +86,17 @@
             <!-- End of Theband section -->
 
             <!-- Tour section-->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading text-white">Remember to book your tickets!</p>
-
+                    <!-- Tickets -->
                     <ul class="tickets-list">
                         <li>September <span class="sold-out">Sold out</span></li>
                         <li>October <span class="sold-out">Sold out</span></li>
                         <li>November <span class="quantities">3</span></li>
                     </ul>
-                    <!-- Tour places -->
+                    <!-- Places -->
                     <div class="row place-listing">
                         <div class="col col-third">
                             <img src="./assests/img/tour places/newyork.jpg" alt="NewYork" class="place-img">
@@ -129,13 +130,13 @@
                                 <button class="buy-btn btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
+
                     </div>
                 </div>
             </div>
 
             <!-- Contact section -->
-            <div class="content-section">
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
@@ -214,14 +215,20 @@
             </div>
 
             <footer class="modal-footer">
-                <p class="modal-help">Need <a href="">help?</a></p>
-            </footer>
+                <div class="row">
+                    <div class="modal-close-btn ">CLOSE <i class="ti-close"></i></div>
+                    <div class="col-full modal-help">Need <a href="">help?</a></div>
+                </div>
+
+
         </div>
+        </footer>
+    </div>
     </div>
 
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal = document.querySelector('.js-modal') <!-- đây là chuyền cái css selector vào hàm -->
+        const modal = document.querySelector('.js-modal') <!--chuyền css selector vào hàm -->
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer = document.querySelector('.js-modal-container')
         //hiển thị modal mua vé (thêm class open vào modal)
