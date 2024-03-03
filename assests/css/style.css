@@ -81,7 +81,28 @@ html {
     width: 33.33333%;
 }
 
+/* reponsive  */
+@media (min-width: 1024px) {
+    .pc {
+        display: block;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .tablet {
+        display: block;
+    }
+}
+
+@media (max-width: 739px) {
+    .mobile {
+        display: block;
+    }
+}
+
+/* end of reponsive  */
 /* Main */
+
 #main {}
 
 #header {
@@ -202,7 +223,7 @@ in this case, kích thước chiều cao luôn = 50% chiều rộng. */
 
 .content-section {
     width: 800px;
-    /*????????????*/
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
@@ -367,6 +388,7 @@ in this case, kích thước chiều cao luôn = 50% chiều rộng. */
     cursor: pointer;
     padding: 12px;
     opacity: 0.8;
+    transition: 0.3s;
 }
 
 .modal-header {
@@ -435,6 +457,13 @@ in this case, kích thước chiều cao luôn = 50% chiều rộng. */
     color: #fff;
     background-color: #f44336;
     padding: 8px 16px;
+}
+
+.modal-close-btn:hover {
+    background-color: #757575;
+    transition: 0.3;
+    color: #f44336;
+    font-weight: 500;
 }
 
 @keyframes modalFadeIn {
