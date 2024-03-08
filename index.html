@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
-    <link rel="icon" href="./assests/favicon/favicon-32x32.png" type="image/x-icon" />
+    <link rel="icon" href="https://www.w3schools.com/favicon.ico" type="image/x-icon" />
     <!-- /* https://www.w3schools.com/favicon.ico */ -->
     <link rel="stylesheet" href="./assests/css/style.css">
+    <link rel="stylesheet" href="./assests/css/responsive.css">
     <link rel="stylesheet" href="./assests/fonts/themify-icons/themify-icons.css">
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
         integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
@@ -36,11 +37,18 @@
                 </li>
             </ul>
             <!-- END NAV -->
+
+            <!-- search header button -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
 
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
         </div>
+        <!-- search header button -->
+
         <!-- Slider New York -->
         <div id="slider">
             <div class="text-content">
@@ -258,11 +266,19 @@
         })
     </script>
 
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+        
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = 'null';
+            }
+        }
+    </script>
 </body>
-
 </html>
-
-
-
-
-

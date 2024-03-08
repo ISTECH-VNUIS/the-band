@@ -81,29 +81,12 @@ html {
     width: 33.33333%;
 }
 
-/* reponsive  */
-@media (min-width: 1024px) {
-    .pc {
-        display: block;
-    }
-}
-
-@media (min-width: 740px) and (max-width: 1023px) {
-    .tablet {
-        display: block;
-    }
-}
-
-@media (max-width: 739px) {
-    .mobile {
-        display: block;
-    }
-}
-
-/* end of reponsive  */
 /* Main */
 
-#main {}
+#main {
+    /* overflow: hidden;
+    could be using to hide elemets that gets flow out when doing responsive,not recommending */
+}
 
 #header {
     position: fixed;
@@ -113,6 +96,7 @@ html {
     height: 46px;
     background-color: #000;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
@@ -171,22 +155,29 @@ html {
     font-size: 14px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
-
 }
 
 #header .search-btn:hover {
     background-color: #f44336;
     cursor: pointer;
 }
+#header .mobile-menu-btn:hover {
+    background-color: thistle;
+}
 
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon {
-    color: white;
+    color: #fff;
     font-size: 20px;
     line-height: 46px;
-    font-weight: bolder;
 }
 
 #slider {
@@ -225,6 +216,8 @@ in this case, kích thước chiều cao luôn = 50% chiều rộng. */
     width: 800px;
     max-width: 100%;
     padding: 64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -454,16 +447,15 @@ in this case, kích thước chiều cao luôn = 50% chiều rộng. */
 
 .modal-close-btn {
     float: left;
-    color: #fff;
-    background-color: #f44336;
     padding: 8px 16px;
+    border: 2px solid #f44336;
+    border-radius: 60px;
 }
 
 .modal-close-btn:hover {
-    background-color: #757575;
-    transition: 0.3;
-    color: #f44336;
-    font-weight: 500;
+    background-color: #f44336;
+    color: #fff;
+    opacity: 1;
 }
 
 @keyframes modalFadeIn {
