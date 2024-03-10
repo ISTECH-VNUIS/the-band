@@ -26,7 +26,8 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a>More <i class="nav-angle-down ti-angle-down"></i>
+                    <a href="#">
+                        More <i class="nav-angle-down ti-angle-down"></i>
                         <!-- <i class="fas fa-arrow-down"></i>  -->
                     </a>
                     <ul class="subnav">
@@ -271,12 +272,23 @@
         var mobileMenu = document.getElementById('mobile-menu');
         var headerHeight = header.clientHeight;
         
-        mobileMenu.onclick = function () {
+        // Open/Close menu
+        mobileMenu.onclick = function() {
             var isClosed = header.clientHeight === headerHeight;
             if (isClosed) {
                 header.style.height = 'auto';
             } else {
-                header.style.height = 'null';
+                header.style.height = null;
+            }
+        }
+
+        // Tự đống đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function() {
+                header.style.height = null;
             }
         }
     </script>
